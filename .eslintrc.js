@@ -13,6 +13,7 @@ module.exports = {
     'constructor-super': 2,
     'quote-props': [2, 'consistent'],
     'no-underscore-dangle': [1],
-    'semi': [2, 'never']
+    'semi': [2, 'never'],
+    'import/no-unresolved': [2, { ignore: ['react-reactions'] }]
   }
 }

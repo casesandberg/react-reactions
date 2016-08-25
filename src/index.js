@@ -1,1 +1,1 @@
-export default 'FOO'
+export default 'Reactions'
