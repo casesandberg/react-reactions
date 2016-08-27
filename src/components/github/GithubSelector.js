@@ -40,7 +40,7 @@ export const GithubSelector = (props) => {
       <div style={ styles.divider } />
       <div style={ styles.emoji }>
         { _.map(props.reactions, (reaction, i) => {
-          return <GithubSelectorEmoji { ...reaction } key={ i } />
+          return <GithubSelectorEmoji shortcode={ reaction } key={ i } />
         }) }
       </div>
     </div>
@@ -48,26 +48,7 @@ export const GithubSelector = (props) => {
 }
 
 GithubSelector.defaultProps = {
-  reactions: [
-    {
-      emoji: '👍',
-    },
-    {
-      emoji: '👎',
-    },
-    {
-      emoji: '😄',
-    },
-    {
-      emoji: '🎉',
-    },
-    {
-      emoji: '😕',
-    },
-    {
-      emoji: '❤️',
-    },
-  ],
+  reactions: ['👍', '👎', '😄', '🎉', '😕', '❤️'],
 }
 
 export default GithubSelector

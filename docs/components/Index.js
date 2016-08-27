@@ -7,7 +7,7 @@ export const Index = () => {
   const styles = reactCSS({
     'default': {
       index: {
-
+        padding: '20px',
       },
       githubSelector: {
         position: 'absolute',

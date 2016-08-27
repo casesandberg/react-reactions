@@ -25,7 +25,7 @@ export const GithubSelectorEmoji = (props) => {
 
   return (
     <div style={ styles.emoji }>
-      { props.emoji }
+      { props.shortcode }
     </div>
   )
 }
