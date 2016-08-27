@@ -2,9 +2,9 @@ import ReactDOM from 'react-dom'
 import React from 'react'
 import '../node_modules/normalize.css/normalize.css'
 
-import REACTIONS from 'react-reactions'
+import Index from './components/Index'
 
 ReactDOM.render(
-  React.createElement('div', {}, REACTIONS),
+  <Index />,
   document.getElementById('root')
 )

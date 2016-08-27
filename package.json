@@ -39,5 +39,9 @@
     "style-loader": "^0.13.1",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.15.0"
+  },
+  "dependencies": {
+    "lodash": "^4.15.0",
+    "reactcss": "^1.0.6"
   }
 }
