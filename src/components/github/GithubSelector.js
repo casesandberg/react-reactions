@@ -9,7 +9,6 @@ export const GithubSelector = (props) => {
     'default': {
       selector: {
         paddingTop: '5px',
-        paddingBottom: '5px',
         backgroundColor: '#fff',
         border: '1px solid rgba(0,0,0,0.15)',
         borderRadius: '4px',
@@ -24,12 +23,12 @@ export const GithubSelector = (props) => {
       },
       divider: {
         height: '1px',
-        margin: '8px 1px',
+        margin: '8px 1px 0px',
         backgroundColor: '#e5e5e5',
       },
       emoji: {
-        margin: '0 6px 3px 6px',
         display: 'flex',
+        margin: '0 6px',
       },
     },
   })

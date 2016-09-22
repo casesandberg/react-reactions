@@ -1,9 +1,13 @@
 import React from 'react'
 import reactCSS, { hover } from 'reactcss'
+import active from '../../helpers/active'
 
 export const GithubSelectorEmoji = (props) => {
   const styles = reactCSS({
     'default': {
+      wrap: {
+        padding: '8px 0',
+      },
       emoji: {
         width: '34px',
         textAlign: 'center',
@@ -21,13 +25,20 @@ export const GithubSelectorEmoji = (props) => {
         transform: 'scale(1.2)',
       },
     },
+    'active': {
+      wrap: {
+        backgroundColor: '#f2f8fa',
+      },
+    },
   }, props)
 
   return (
-    <div style={ styles.emoji }>
-      { props.shortcode }
+    <div style={ styles.wrap }>
+      <div style={ styles.emoji }>
+        { props.shortcode }
+      </div>
     </div>
   )
 }
 
-export default hover(GithubSelectorEmoji)
+export default hover(active(GithubSelectorEmoji))
