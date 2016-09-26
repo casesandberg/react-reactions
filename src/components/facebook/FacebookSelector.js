@@ -27,7 +27,7 @@ export const FacebookSelector = (props) => {
         return (
           <div style={ styles.icon }>
             <FacebookSelectorEmoji
-              icon={ icons.find('facebook', reaction) }
+              icon={ icons.find(props.variant, reaction) }
               label={ reaction }
               key={ i }
             />
@@ -41,6 +41,7 @@ export const FacebookSelector = (props) => {
 FacebookSelector.defaultProps = {
   reactions: ['like', 'love', 'haha', 'wow', 'sad', 'angry'],
   iconSize: 38,
+  variant: 'facebook',
 }
 
 export default FacebookSelector
