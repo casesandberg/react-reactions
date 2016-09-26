@@ -13,6 +13,7 @@ export const GithubSelector = (props) => {
         border: '1px solid rgba(0,0,0,0.15)',
         borderRadius: '4px',
         boxShadow: '0 3px 12px rgba(0,0,0,0.15)',
+        display: 'inline-block',
       },
       label: {
         fontSize: '14px',

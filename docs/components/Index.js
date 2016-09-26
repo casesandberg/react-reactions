@@ -1,7 +1,7 @@
 import React from 'react'
 import reactCSS from 'reactcss'
 
-import { GithubSelector } from 'react-reactions'
+import { FacebookSelector, GithubSelector } from 'react-reactions'
 
 export const Index = () => {
   const styles = reactCSS({
@@ -19,6 +19,9 @@ export const Index = () => {
     <div style={ styles.index }>
       <div style={ styles.githubSelector }>
         <GithubSelector />
+        <br />
+        <br />
+        <FacebookSelector />
       </div>
     </div>
   )
