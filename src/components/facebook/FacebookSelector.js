@@ -23,13 +23,12 @@ export const FacebookSelector = (props) => {
 
   return (
     <div style={ styles.selector }>
-      { _.map(props.reactions, (reaction, i) => {
+      { _.map(props.reactions, (reaction) => {
         return (
-          <div style={ styles.icon }>
+          <div style={ styles.icon } key={ reaction }>
             <FacebookSelectorEmoji
               icon={ icons.find(props.variant, reaction) }
               label={ reaction }
-              key={ i }
             />
           </div>
         )
