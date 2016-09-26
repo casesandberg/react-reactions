@@ -1,7 +1,7 @@
 import React from 'react'
 import reactCSS from 'reactcss'
 
-import { FacebookSelector, GithubSelector, PokemonSelector } from 'react-reactions'
+import { FacebookSelector, GithubSelector, PokemonSelector, SlackSelector } from 'react-reactions'
 
 export const Index = () => {
   const styles = reactCSS({
@@ -25,6 +25,9 @@ export const Index = () => {
         <br />
         <br />
         <PokemonSelector />
+        <br />
+        <br />
+        <SlackSelector />
       </div>
     </div>
   )
