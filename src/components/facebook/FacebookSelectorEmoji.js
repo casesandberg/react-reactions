@@ -12,9 +12,7 @@ export const GithubSelectorEmoji = (props) => {
       icon: {
         paddingBottom: '100%',
         backgroundImage: `url(${ props.icon })`,
-        // backgroundColor: props.bg,
         backgroundSize: '100% 100%',
-        // borderRadius: '50%',
         transformOrigin: 'bottom',
         cursor: 'pointer',
 

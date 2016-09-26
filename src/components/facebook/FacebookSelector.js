@@ -5,15 +5,6 @@ import icons from '../../helpers/icons'
 
 import FacebookSelectorEmoji from './FacebookSelectorEmoji'
 
-const bgColors = {
-  like: '#5890ff',
-  love: '#f25268',
-  haha: '#f0ba15',
-  wow: '#f0ba15',
-  sad: '#f0ba15',
-  angry: '#f7714b',
-}
-
 export const FacebookSelector = (props) => {
   const styles = reactCSS({
     'default': {
@@ -38,7 +29,6 @@ export const FacebookSelector = (props) => {
             <FacebookSelectorEmoji
               icon={ icons.find('facebook', reaction) }
               label={ reaction }
-              bg={ bgColors[reaction] }
               key={ i }
             />
           </div>
