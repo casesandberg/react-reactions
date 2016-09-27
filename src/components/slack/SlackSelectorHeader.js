@@ -1,9 +1,10 @@
 import React from 'react'
 import reactCSS from 'reactcss'
+import _ from 'lodash'
 
 import SlackSelectorHeaderTab from './SlackSelectorHeaderTab'
 
-export const SlackSelectorHeader = () => {
+export const SlackSelectorHeader = (props) => {
   const styles = reactCSS({
     'default': {
       header: {
@@ -16,17 +17,49 @@ export const SlackSelectorHeader = () => {
 
   return (
     <div style={ styles.header }>
-      <SlackSelectorHeaderTab />
-      <SlackSelectorHeaderTab />
-      <SlackSelectorHeaderTab />
-      <SlackSelectorHeaderTab />
+      { _.map(props.tabs, (tab) => {
+        return (
+          <SlackSelectorHeaderTab
+            icon={ tab.icon }
+            id={ tab.id }
+            key={ tab.id }
+            active={ tab.id === props.active }
+          />
+        )
+      }) }
     </div>
   )
 }
 
 SlackSelectorHeader.defaultProps = {
-  tabs: ['mine', 'people', 'nature', 'food-and-drink', 'activity', 'travel-and-places',
-          'objects', 'symbols', 'flags'],
+  tabs: [{
+    icon: '',
+    id: 'mine',
+  }, {
+    icon: '',
+    id: 'people',
+  }, {
+    icon: '',
+    id: 'nature',
+  }, {
+    icon: '',
+    id: 'food-and-drink',
+  }, {
+    icon: '',
+    id: 'activity',
+  }, {
+    icon: '',
+    id: 'travel-and-places',
+  }, {
+    icon: '',
+    id: 'objects',
+  }, {
+    icon: '',
+    id: 'symbols',
+  }, {
+    icon: '',
+    id: 'flags',
+  }],
 }
 
 export default SlackSelectorHeader

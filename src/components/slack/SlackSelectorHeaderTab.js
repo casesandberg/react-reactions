@@ -1,19 +1,23 @@
 import React from 'react'
-import reactCSS from 'reactcss'
+import reactCSS, { hover } from 'reactcss'
 
-export const SlackSelectorHeaderTab = () => {
+export const SlackSelectorHeaderTab = (props) => {
   const styles = reactCSS({
     'default': {
       tab: {
         color: '#9e9ea6',
-        padding: '4px 6px 6px',
+        padding: '4px 8px 6px',
         borderRadius: '6px 6px 0 0',
-        marginRight: '3px',
-        borderBottom: '3px solid transparent',
+        marginRight: '1px',
+        borderBottom: '3px solid tranlsparent',
+        cursor: 'pointer',
       },
       icon: {
         width: '20px',
         height: '18px',
+        fontFamily: 'Slack',
+        fontSize: '20px',
+        WebkitFontSmoothing: 'antialiased',
       },
     },
     'hover': {
@@ -28,15 +32,15 @@ export const SlackSelectorHeaderTab = () => {
         borderBottom: '3px solid #2ab27b',
       },
     },
-  })
+  }, props)
 
   return (
     <div style={ styles.tab }>
       <div style={ styles.icon }>
-        i
+        { props.icon }
       </div>
     </div>
   )
 }
 
-export default SlackSelectorHeaderTab
+export default hover(SlackSelectorHeaderTab)

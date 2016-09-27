@@ -22,7 +22,10 @@ export const Index = () => {
         <GithubSelector />
         <br />
         <br />
+        <br />
+        <br />
         <FacebookSelector />
+        <br />
         <br />
         <br />
         <PokemonSelector />

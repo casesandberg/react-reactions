@@ -8,21 +8,22 @@ import SlackSelectorSection from './SlackSelectorSection'
 export const SlackSelectorItems = () => {
   const styles = reactCSS({
     'default': {
-      wrap: {
+      sections: {
+        padding: '4px',
         background: '#fff',
-        maxHeight: '270px',
+      },
+      wrap: {
+        maxHeight: '220px',
         overflowY: 'auto',
         overflowX: 'hidden',
-      },
-      sections: {
-        padding: '8px',
+        padding: '4px',
       },
     },
   })
 
   return (
-    <div style={ styles.wrap }>
-      <div style={ styles.sections }>
+    <div style={ styles.sections }>
+      <div style={ styles.wrap } className="frame">
         { _.map(emoji, (group, slug) => {
           return (
             <SlackSelectorSection key={ slug } slug={ slug } emojis={ group } />
