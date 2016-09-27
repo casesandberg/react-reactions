@@ -41,6 +41,7 @@
     "webpack-dev-server": "^1.15.0"
   },
   "dependencies": {
+    "emoji-as-array": "^1.0.0",
     "lodash": "^4.15.0",
     "reactcss": "^1.0.6"
   }

@@ -1,6 +1,7 @@
 import React from 'react'
 import reactCSS from 'reactcss'
-import { emojiGroups } from '../../helpers/emoji'
+import _ from 'lodash'
+import emoji from 'emoji-as-array'
 
 import SlackSelectorSection from './SlackSelectorSection'
 
@@ -16,7 +17,11 @@ export const SlackSelectorHeaderItems = () => {
 
   return (
     <div style={ styles.items }>
-      <SlackSelectorSection emojis={ emojiGroups.people } />
+      { _.map(emoji, (group, key) => {
+        return (
+          <SlackSelectorSection emojis={ group } />
+        )
+      }) }
     </div>
   )
 }

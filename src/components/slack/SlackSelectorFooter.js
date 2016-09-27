@@ -1,8 +1,5 @@
 import React from 'react'
 import reactCSS from 'reactcss'
-import { emojiGroups } from '../../helpers/emoji'
-
-import SlackSelectorSection from './SlackSelectorSection'
 
 export const SlackSelectorFooter = () => {
   const styles = reactCSS({

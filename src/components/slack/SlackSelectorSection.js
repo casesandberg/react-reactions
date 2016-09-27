@@ -1,6 +1,7 @@
 import React from 'react'
 import reactCSS from 'reactcss'
 import _ from 'lodash'
+import { slackEmojiColors } from '../../helpers/colors'
 
 import SlackSelectorSectionEmoji from './SlackSelectorSectionEmoji'
 
@@ -14,13 +15,6 @@ export const SlackSelectorSection = (props) => {
         display: 'flex',
         flexWrap: 'wrap',
       },
-      emoji: {
-        width: '36px',
-        height: '32px',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-      },
     },
   })
 
@@ -29,9 +23,11 @@ export const SlackSelectorSection = (props) => {
       <div style={ styles.emojis }>
         { _.map(props.emojis, (emoji, i) => {
           return (
-            <div style={ styles.emoji }>
-              <SlackSelectorSectionEmoji emoji={ emoji } key={ i } />
-            </div>
+            <SlackSelectorSectionEmoji
+              hoverColor={ slackEmojiColors[i % slackEmojiColors.length] }
+              emoji={ emoji }
+              key={ i }
+            />
           )
         }) }
       </div>
