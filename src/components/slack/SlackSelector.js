@@ -28,7 +28,7 @@ export const SlackSelector = (props) => {
     <div style={ styles.menu }>
       <SlackSelectorCSS />
       <SlackSelectorHeader active={ props.active } />
-      <SlackSelectorItems />
+      <SlackSelectorItems removeEmojis={ props.removeEmojis } frequent={ props.frequent } />
       <SlackSelectorFooter />
     </div>
   )
@@ -37,6 +37,9 @@ export const SlackSelector = (props) => {
 SlackSelector.defaultProps = {
   reactions: ['👍', '👎', '😄', '🎉', '😕', '❤️'],
   active: 'mine',
+  removeEmojis: ['🙂', '🙃', '☺️', '🤑', '🤓', '🤗', '🙄', '🤔', '🙁', '☹️', '🤐', '🤒',
+                 '🤕', '🤖'],
+  frequent: ['👍', '🐉', '🙌', '🗿', '😊', '🐬', '😹', '👻', '🚀', '🚁', '🏇', '🇨🇦'],
 }
 
 export default SlackSelector

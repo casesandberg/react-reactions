@@ -2,6 +2,7 @@ export const emojiColors = ['#b7e887', '#b5e0fe', '#f9ef67', '#f3c1fd', '#ffe1ae
 
 export const sectionSlugToName = (name) => {
   return {
+    'mine': 'Frequently Used',
     'people': 'People',
     'nature': 'Nature',
     'food-and-drink': 'Food & Drink',
