@@ -9,6 +9,7 @@ export const SlackSelector = () => {
   const styles = reactCSS({
     'default': {
       menu: {
+        fontFamily: '"Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif',
         position: 'absolute',
         minWidth: '22.4375rem',
         maxWidth: '22.4375rem',

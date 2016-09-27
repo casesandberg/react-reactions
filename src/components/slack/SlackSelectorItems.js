@@ -5,25 +5,32 @@ import emoji from 'emoji-as-array'
 
 import SlackSelectorSection from './SlackSelectorSection'
 
-export const SlackSelectorHeaderItems = () => {
+export const SlackSelectorItems = () => {
   const styles = reactCSS({
     'default': {
-      items: {
-        padding: '8px',
+      wrap: {
         background: '#fff',
+        maxHeight: '270px',
+        overflowY: 'auto',
+        overflowX: 'hidden',
+      },
+      sections: {
+        padding: '8px',
       },
     },
   })
 
   return (
-    <div style={ styles.items }>
-      { _.map(emoji, (group, key) => {
-        return (
-          <SlackSelectorSection emojis={ group } />
-        )
-      }) }
+    <div style={ styles.wrap }>
+      <div style={ styles.sections }>
+        { _.map(emoji, (group, slug) => {
+          return (
+            <SlackSelectorSection key={ slug } slug={ slug } emojis={ group } />
+          )
+        }) }
+      </div>
     </div>
   )
 }
 
-export default SlackSelectorHeaderItems
+export default SlackSelectorItems

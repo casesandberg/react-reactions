@@ -8,9 +8,10 @@ export const Index = () => {
     'default': {
       index: {
         padding: '20px',
+        display: 'flex',
       },
       githubSelector: {
-        position: 'absolute',
+        marginRight: '40px',
       },
     },
   })
@@ -27,6 +28,9 @@ export const Index = () => {
         <PokemonSelector />
         <br />
         <br />
+
+      </div>
+      <div style={ styles.slack }>
         <SlackSelector />
       </div>
     </div>

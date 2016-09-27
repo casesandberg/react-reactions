@@ -12,6 +12,8 @@ export const SlackSelectorFooter = () => {
         fontSize: '16px',
         lineHeight: '1.5',
         margin: '4px 2px',
+        fontWeight: '600',
+        WebkitFontSmoothing: 'antialiased',
       },
     },
   })
