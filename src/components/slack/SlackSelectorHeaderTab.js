@@ -6,7 +6,7 @@ export const SlackSelectorHeaderTab = (props) => {
     'default': {
       tab: {
         color: '#9e9ea6',
-        padding: '4px 8px 6px',
+        padding: '5px 8px 7px',
         borderRadius: '6px 6px 0 0',
         marginRight: '1px',
         borderBottom: '3px solid tranlsparent',
@@ -28,7 +28,6 @@ export const SlackSelectorHeaderTab = (props) => {
     'active': {
       tab: {
         color: '#9e9ea6',
-        paddingTop: '3px',
         borderBottom: '3px solid #2ab27b',
       },
     },

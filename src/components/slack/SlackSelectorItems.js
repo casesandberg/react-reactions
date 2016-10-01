@@ -9,14 +9,14 @@ export const SlackSelectorItems = (props) => {
   const styles = reactCSS({
     'default': {
       sections: {
-        padding: '4px',
+        padding: '4px 4px 0',
         background: '#fff',
       },
       wrap: {
         maxHeight: '220px',
         overflowY: 'auto',
         overflowX: 'hidden',
-        padding: '4px',
+        padding: '4px 4px 8px',
       },
     },
   })
