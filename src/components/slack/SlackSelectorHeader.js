@@ -15,6 +15,8 @@ export const SlackSelectorHeader = (props) => {
     },
   })
 
+  const handleClick = (id) => document.getElementById(id).scrollIntoView(true)
+
   return (
     <div style={ styles.header }>
       { _.map(props.tabs, (tab) => {
@@ -24,6 +26,7 @@ export const SlackSelectorHeader = (props) => {
             id={ tab.id }
             key={ tab.id }
             active={ tab.id === props.active }
+            onClick={ handleClick }
           />
         )
       }) }

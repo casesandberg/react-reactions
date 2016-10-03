@@ -33,8 +33,12 @@ export const SlackSelectorHeaderTab = (props) => {
     },
   }, props)
 
+  const handleClick = () => {
+    props.onClick && props.onClick(props.id)
+  }
+
   return (
-    <div style={ styles.tab }>
+    <div style={ styles.tab } onClick={ handleClick }>
       <div style={ styles.icon }>
         { props.icon }
       </div>

@@ -26,7 +26,7 @@ export const SlackSelectorSection = (props) => {
   })
 
   return (
-    <div style={ styles.section }>
+    <div style={ styles.section } id={ props.slug }>
       <div style={ styles.title }>{ sectionSlugToName(props.slug) }</div>
       <div style={ styles.emojis }>
         { _.map(props.emojis, (emoji, i) => {
