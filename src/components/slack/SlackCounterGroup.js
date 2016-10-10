@@ -11,6 +11,7 @@ export const SlackCounterGroup = (props) => {
         paddingLeft: '3px',
         paddingRight: '4px',
         border: '1px solid #E8E8E8',
+        background: '#fff',
         fontSize: '11px',
         color: '#999',
         fontWeight: '500',

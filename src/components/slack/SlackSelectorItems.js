@@ -13,7 +13,7 @@ export const SlackSelectorItems = (props) => {
         background: '#fff',
       },
       wrap: {
-        maxHeight: '220px',
+        maxHeight: props.scrollHeight,
         overflowY: 'auto',
         overflowX: 'hidden',
         padding: '4px 4px 8px',

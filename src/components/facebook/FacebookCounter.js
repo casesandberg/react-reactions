@@ -46,6 +46,7 @@ export const FacebookCounter = (props) => {
             key={ i }
             reaction={ reaction }
             index={ reactions.length - i }
+            bg={ props.bg }
           />
         )
       }) }
@@ -58,6 +59,7 @@ export const FacebookCounter = (props) => {
 
 FacebookCounter.defaultProps = {
   important: [],
+  bg: '#fff',
 }
 
 export default FacebookCounter

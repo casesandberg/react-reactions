@@ -3,6 +3,7 @@ import reactCSS from 'reactcss'
 
 import { FacebookCounter, FacebookSelector, GithubCounter, GithubSelector,
   PokemonSelector, SlackCounter, SlackSelector, YoutubeCounter } from 'react-reactions'
+import TitleWrap from './TitleWrap'
 
 export const Index = () => {
   const styles = reactCSS({
@@ -13,6 +14,9 @@ export const Index = () => {
       },
       githubSelector: {
         marginRight: '40px',
+      },
+      space: {
+        height: '60px',
       },
     },
   })
@@ -26,24 +30,44 @@ export const Index = () => {
 
   return (
     <div>
+      <br />
+      <br />
+      <br />
       <div style={ styles.index }>
         <div style={ styles.githubSelector }>
-          <GithubSelector onSelect={ handleSelect } />
-          <br />
-          <br />
-          <br />
-          <br />
-          <FacebookSelector onSelect={ handleSelect } />
-          <br />
-          <br />
-          <br />
-          <PokemonSelector onSelect={ handleSelect } />
-          <br />
-          <br />
+
+          <TitleWrap title="Github">
+            <GithubSelector onSelect={ handleSelect } />
+          </TitleWrap>
+
+          <div style={ styles.space } />
+
+          <TitleWrap
+            title="Pokemon"
+            footer={ (
+              <a
+                href="#"
+                target="__blank"
+                style={{ textDecoration: 'none', color: '#ccc' }}
+              >
+                Illustrations by Chris Owens
+              </a>
+            ) }
+          >
+            <PokemonSelector onSelect={ handleSelect } />
+          </TitleWrap>
+
+          <div style={ styles.space } />
+
+          <TitleWrap title="Facebook">
+            <FacebookSelector onSelect={ handleSelect } />
+          </TitleWrap>
 
         </div>
         <div style={ styles.slack }>
-          <SlackSelector onSelect={ handleSelect } />
+          <TitleWrap title="Slack">
+            <SlackSelector scrollHeight="213px" onSelect={ handleSelect } />
+          </TitleWrap>
         </div>
       </div>
       <div style={ styles.index }>
@@ -88,6 +112,7 @@ export const Index = () => {
               emoji: 'love',
               by: 'Rob Sandberg',
             }] }
+            bg="#fafafa"
             user="Case Sandberg"
             important={ ['Henry Boldizsar', 'Rob Sandberg'] }
             onClick={ handleFacebookClick }

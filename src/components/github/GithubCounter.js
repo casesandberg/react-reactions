@@ -12,6 +12,7 @@ export const GithubCounter = (props) => {
         border: '1px solid #ddd',
         borderRadius: '4px',
         display: 'flex',
+        background: '#fff',
       },
       add: {
         fill: '#4078c0',

@@ -11,7 +11,7 @@ export const FacebookCounterReaction = (props) => {
         backgroundSize: '100% 100%',
         borderRadius: '8px',
         backgroundImage: `url(${ icons.find('facebook', props.reaction) })`,
-        boxShadow: '0 0 0 2px #fff',
+        boxShadow: `0 0 0 2px ${ props.bg }`,
         position: 'relative',
         zIndex: props.index,
       },
