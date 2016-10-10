@@ -2,7 +2,7 @@
   "name": "react-reactions",
   "version": "0.1.0",
   "description": "",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "scripts": {
     "start": "webpack-dev-server --config ./webpack.config.dev.js --port 2570 --quiet",
     "docs-dist": "webpack --config webpack.config.prod.js",
