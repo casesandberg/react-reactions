@@ -1,10 +1,12 @@
+/* eslint-disable max-len, no-shadow */
+
 import React from 'react'
 import reactCSS, { hover } from 'reactcss'
 import _ from 'lodash'
 
 import GithubCounterGroup from './GithubCounterGroup'
 
-export const GithubCounter = (props) => {
+export const GithubCounter = ({ hover, counters, user, onSelect, onAdd }) => {
   const styles = reactCSS({
     'default': {
       counter: {
@@ -33,27 +35,27 @@ export const GithubCounter = (props) => {
         opacity: '1',
       },
     },
-  }, { hover: props.hover })
+  }, { hover })
 
-  const groups = _.groupBy(props.counters, 'emoji')
+  const groups = _.groupBy(counters, 'emoji')
 
 
   return (
     <div style={ styles.counter }>
-      { _.map(groups, (counters, emoji) => {
-        const names = _.map(counters, 'by')
+      { _.map(groups, (c, emoji) => {
+        const names = _.map(c, 'by')
         return (
           <GithubCounterGroup
             key={ emoji }
             emoji={ emoji }
-            count={ counters.length }
+            count={ c.length }
             names={ names }
-            active={ _.includes(names, props.user) }
-            onSelect={ props.onSelect }
+            active={ _.includes(names, user) }
+            onSelect={ onSelect }
           />
         )
       }) }
-      <div style={ styles.add } onClick={ props.onAdd }>
+      <div style={ styles.add } onClick={ onAdd }>
         <svg height="16" width="7" viewBox="0 0 7 16" >
           <path d="M4 7V4H3v3H0v1h3v3h1V8h3V7H4z"></path>
         </svg>

@@ -5,7 +5,7 @@ import icons from '../../helpers/icons'
 
 import FacebookSelectorEmoji from './FacebookSelectorEmoji'
 
-export const FacebookSelector = (props) => {
+export const FacebookSelector = ({ iconSize, reactions, variant, onSelect }) => {
   const styles = reactCSS({
     'default': {
       selector: {
@@ -16,20 +16,20 @@ export const FacebookSelector = (props) => {
         display: 'flex',
       },
       icon: {
-        width: `${ props.iconSize + 10 }px`,
+        width: `${ iconSize + 10 }px`,
       },
     },
   })
 
   return (
     <div style={ styles.selector }>
-      { _.map(props.reactions, (reaction) => {
+      { _.map(reactions, (reaction) => {
         return (
           <div style={ styles.icon } key={ reaction }>
             <FacebookSelectorEmoji
-              icon={ icons.find(props.variant, reaction) }
+              icon={ icons.find(variant, reaction) }
               label={ reaction }
-              onSelect={ props.onSelect }
+              onSelect={ onSelect }
             />
           </div>
         )

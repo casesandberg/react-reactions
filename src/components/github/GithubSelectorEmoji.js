@@ -1,8 +1,10 @@
+/* eslint-disable no-shadow */
+
 import React from 'react'
 import reactCSS, { hover } from 'reactcss'
 import active from '../../helpers/active'
 
-export const GithubSelectorEmoji = (props) => {
+export const GithubSelectorEmoji = ({ onSelect, shortcode, hover, active }) => {
   const styles = reactCSS({
     'default': {
       wrap: {
@@ -30,16 +32,16 @@ export const GithubSelectorEmoji = (props) => {
         backgroundColor: '#f2f8fa',
       },
     },
-  }, props)
+  }, { hover, active })
 
   const handleClick = () => {
-    props.onSelect(props.shortcode)
+    onSelect(shortcode)
   }
 
   return (
     <div style={ styles.wrap } onClick={ handleClick }>
       <div style={ styles.emoji }>
-        { props.shortcode }
+        { shortcode }
       </div>
     </div>
   )

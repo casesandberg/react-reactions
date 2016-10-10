@@ -5,7 +5,7 @@ import { listOfNames } from '../../helpers/strings'
 
 import FacebookCounterReaction from './FacebookCounterReaction'
 
-export const FacebookCounter = (props) => {
+export const FacebookCounter = ({ counters, user, important, onClick, bg }) => {
   const styles = reactCSS({
     'default': {
       counter: {
@@ -24,30 +24,30 @@ export const FacebookCounter = (props) => {
     },
   })
 
-  const groups = _.groupBy(props.counters, 'emoji')
-  const names = _.map(props.counters, 'by')
+  const groups = _.groupBy(counters, 'emoji')
+  const names = _.map(counters, 'by')
 
   const nameString = []
-  if (_.includes(names, props.user)) {
+  if (_.includes(names, user)) {
     nameString.push('You')
   }
-  if (props.important.length) {
-    if (_.includes(names, props.important[0])) {
-      nameString.push(props.important[0])
+  if (important.length) {
+    if (_.includes(names, important[0])) {
+      nameString.push(important[0])
     }
   }
   nameString.push(`${ names.length - nameString.length } others`)
 
 
   return (
-    <div style={ styles.counter } onClick={ props.onClick }>
+    <div style={ styles.counter } onClick={ onClick }>
       { _.map(_.keys(groups), (reaction, i, reactions) => {
         return (
           <FacebookCounterReaction
             key={ i }
             reaction={ reaction }
             index={ reactions.length - i }
-            bg={ props.bg }
+            bg={ bg }
           />
         )
       }) }

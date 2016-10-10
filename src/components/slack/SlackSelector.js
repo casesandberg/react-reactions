@@ -6,7 +6,7 @@ import SlackSelectorHeader from './SlackSelectorHeader'
 import SlackSelectorItems from './SlackSelectorItems'
 import SlackSelectorFooter from './SlackSelectorFooter'
 
-export const SlackSelector = (props) => {
+export const SlackSelector = ({ active, scrollHeight, frequent, removeEmojis, onSelect }) => {
   const styles = reactCSS({
     'default': {
       menu: {
@@ -26,14 +26,14 @@ export const SlackSelector = (props) => {
   return (
     <div style={ styles.menu }>
       <SlackSelectorCSS />
-      <SlackSelectorHeader active={ props.active } />
+      <SlackSelectorHeader active={ active } />
       <SlackSelectorItems
-        scrollHeight={ props.scrollHeight }
-        removeEmojis={ props.removeEmojis }
-        frequent={ props.frequent }
-        onSelect={ props.onSelect }
+        scrollHeight={ scrollHeight }
+        removeEmojis={ removeEmojis }
+        frequent={ frequent }
+        onSelect={ onSelect }
       />
-      <SlackSelectorFooter onSelect={ props.onSelect } />
+      <SlackSelectorFooter onSelect={ onSelect } />
     </div>
   )
 }

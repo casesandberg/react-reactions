@@ -2,7 +2,7 @@ import React from 'react'
 import reactCSS, { hover } from 'reactcss'
 import { listOfNames } from '../../helpers/strings'
 
-export const SlackCounterGroup = (props) => {
+export const SlackCounterGroup = ({ onSelect, emoji, count, names, active }) => {
   const styles = reactCSS({
     'default': {
       group: {
@@ -64,17 +64,17 @@ export const SlackCounterGroup = (props) => {
         paddingRight: '0',
       },
     },
-  }, { 'hover': props.hover, 'active': props.active || props.hover, 'no-names': !props.names })
+  }, { hover, 'active': active || hover, 'no-names': !names })
 
   const handleClick = () => {
-    props.onSelect && props.onSelect(props.emoji)
+    onSelect && onSelect(emoji)
   }
 
   return (
     <div style={ styles.group } onClick={ handleClick }>
-      <span style={ styles.emoji }>{ props.emoji }</span> { props.count }
-      { props.names ? (
-        <div style={ styles.tooltip }>{ listOfNames(props.names) }</div>
+      <span style={ styles.emoji }>{ emoji }</span> { count }
+      { names ? (
+        <div style={ styles.tooltip }>{ listOfNames(names) }</div>
       ) : null }
     </div>
   )

@@ -1,3 +1,5 @@
+/* eslint-disable no-shadow */
+
 import React from 'react'
 import reactCSS, { hover } from 'reactcss'
 

@@ -1,7 +1,9 @@
+/* eslint-disable no-shadow */
+
 import React from 'react'
 import reactCSS, { hover } from 'reactcss'
 
-export const SlackSelectorHeaderTab = (props) => {
+export const SlackSelectorHeaderTab = ({ hover, onClick, id, icon, active }) => {
   const styles = reactCSS({
     'default': {
       tab: {
@@ -31,16 +33,16 @@ export const SlackSelectorHeaderTab = (props) => {
         borderBottom: '3px solid #2ab27b',
       },
     },
-  }, props)
+  }, { hover, active })
 
   const handleClick = () => {
-    props.onClick && props.onClick(props.id)
+    onClick && onClick(id)
   }
 
   return (
     <div style={ styles.tab } onClick={ handleClick }>
       <div style={ styles.icon }>
-        { props.icon }
+        { icon }
       </div>
     </div>
   )

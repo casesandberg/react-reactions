@@ -4,7 +4,7 @@ import _ from 'lodash'
 
 import SlackSelectorHeaderTab from './SlackSelectorHeaderTab'
 
-export const SlackSelectorHeader = (props) => {
+export const SlackSelectorHeader = ({ tabs, active }) => {
   const styles = reactCSS({
     'default': {
       header: {
@@ -19,13 +19,13 @@ export const SlackSelectorHeader = (props) => {
 
   return (
     <div style={ styles.header }>
-      { _.map(props.tabs, (tab) => {
+      { _.map(tabs, (tab) => {
         return (
           <SlackSelectorHeaderTab
             icon={ tab.icon }
             id={ tab.id }
             key={ tab.id }
-            active={ tab.id === props.active }
+            active={ tab.id === active }
             onClick={ handleClick }
           />
         )

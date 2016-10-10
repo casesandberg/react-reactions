@@ -4,7 +4,7 @@ import _ from 'lodash'
 
 import GithubSelectorEmoji from './GithubSelectorEmoji'
 
-export const GithubSelector = (props) => {
+export const GithubSelector = ({ reactions, onSelect }) => {
   const styles = reactCSS({
     'default': {
       selector: {
@@ -39,12 +39,12 @@ export const GithubSelector = (props) => {
       <p style={ styles.label }>Pick your reaction</p>
       <div style={ styles.divider } />
       <div style={ styles.emoji }>
-        { _.map(props.reactions, (reaction, i) => {
+        { _.map(reactions, (reaction, i) => {
           return (
             <GithubSelectorEmoji
               key={ i }
               shortcode={ reaction }
-              onSelect={ props.onSelect }
+              onSelect={ onSelect }
             />
           )
         }) }

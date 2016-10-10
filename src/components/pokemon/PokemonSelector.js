@@ -2,13 +2,13 @@ import React from 'react'
 
 import FacebookSelector from '../facebook/FacebookSelector'
 
-export const PokemonSelector = (props) => {
+export const PokemonSelector = ({ reactions, iconSize, onSelect }) => {
   return (
     <FacebookSelector
-      reactions={ props.reactions }
+      reactions={ reactions }
       variant="pokemon"
-      iconSize={ props.iconSize }
-      onSelect={ props.onSelect }
+      iconSize={ iconSize }
+      onSelect={ onSelect }
     />
   )
 }

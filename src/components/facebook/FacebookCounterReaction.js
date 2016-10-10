@@ -2,7 +2,7 @@ import React from 'react'
 import reactCSS from 'reactcss'
 import icons from '../../helpers/icons'
 
-export const FacebookCounterReaction = (props) => {
+export const FacebookCounterReaction = ({ reaction, bg, index }) => {
   const styles = reactCSS({
     'default': {
       reaction: {
@@ -10,10 +10,10 @@ export const FacebookCounterReaction = (props) => {
         height: '16px',
         backgroundSize: '100% 100%',
         borderRadius: '8px',
-        backgroundImage: `url(${ icons.find('facebook', props.reaction) })`,
-        boxShadow: `0 0 0 2px ${ props.bg }`,
+        backgroundImage: `url(${ icons.find('facebook', reaction) })`,
+        boxShadow: `0 0 0 2px ${ bg }`,
         position: 'relative',
-        zIndex: props.index,
+        zIndex: index,
       },
     },
   })

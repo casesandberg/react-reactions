@@ -1,8 +1,10 @@
+/* eslint-disable no-shadow */
+
 import React from 'react'
 import reactCSS, { hover } from 'reactcss'
 import { listOfNames } from '../../helpers/strings'
 
-export const GithubCounterGroup = (props) => {
+export const GithubCounterGroup = ({ hover, active, emoji, count, onSelect, names }) => {
   const styles = reactCSS({
     'default': {
       group: {
@@ -55,16 +57,16 @@ export const GithubCounterGroup = (props) => {
         background: '#f2f8fa',
       },
     },
-  }, { hover: props.hover, active: props.active })
+  }, { hover, active })
 
   const handleClick = () => {
-    props.onSelect(props.emoji)
+    onSelect(emoji)
   }
 
   return (
     <div style={ styles.group } onClick={ handleClick }>
-      <span style={ styles.emoji }>{ props.emoji }</span> { props.count }
-      <div style={ styles.tooltip }>{ listOfNames(props.names) }</div>
+      <span style={ styles.emoji }>{ emoji }</span> { count }
+      <div style={ styles.tooltip }>{ listOfNames(names) }</div>
     </div>
   )
 }

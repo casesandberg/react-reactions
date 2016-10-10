@@ -1,7 +1,9 @@
+/* eslint-disable no-shadow */
+
 import React from 'react'
 import reactCSS, { hover } from 'reactcss'
 
-export const SlackSelectorSectionEmoji = (props) => {
+export const SlackSelectorSectionEmoji = ({ hoverColor, onSelect, emoji, hover }) => {
   const styles = reactCSS({
     'default': {
       wrap: {
@@ -25,19 +27,19 @@ export const SlackSelectorSectionEmoji = (props) => {
     },
     'hover': {
       wrap: {
-        background: props.hoverColor,
+        background: hoverColor,
       },
     },
-  }, props)
+  }, { hover })
 
   const handleClick = () => {
-    props.onSelect(props.emoji)
+    onSelect(emoji)
   }
 
   return (
     <div style={ styles.wrap } onClick={ handleClick }>
       <div style={ styles.emoji }>
-        { props.emoji }
+        { emoji }
       </div>
     </div>
   )

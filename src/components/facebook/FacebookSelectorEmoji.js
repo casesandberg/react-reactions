@@ -1,8 +1,10 @@
+/* eslint-disable no-shadow */
+
 import React from 'react'
 import reactCSS, { hover } from 'reactcss'
 import active from '../../helpers/active'
 
-export const GithubSelectorEmoji = (props) => {
+export const GithubSelectorEmoji = ({ icon, label, onSelect, hover }) => {
   const styles = reactCSS({
     'default': {
       wrap: {
@@ -11,7 +13,7 @@ export const GithubSelectorEmoji = (props) => {
       },
       icon: {
         paddingBottom: '100%',
-        backgroundImage: `url(${ props.icon })`,
+        backgroundImage: `url(${ icon })`,
         backgroundSize: '100% 100%',
         transformOrigin: 'bottom',
         cursor: 'pointer',
@@ -43,15 +45,15 @@ export const GithubSelectorEmoji = (props) => {
         opacity: '1',
       },
     },
-  }, props)
+  }, { hover })
 
   const handleClick = () => {
-    props.onSelect(props.label)
+    onSelect && onSelect(label)
   }
 
   return (
     <div style={ styles.wrap }>
-      <div style={ styles.label }>{ props.label }</div>
+      <div style={ styles.label }>{ label }</div>
       <div style={ styles.icon } onClick={ handleClick } />
     </div>
   )
