@@ -39,7 +39,6 @@ export const SlackSelector = ({ active, scrollHeight, frequent, removeEmojis, on
 }
 
 SlackSelector.defaultProps = {
-  reactions: ['👍', '👎', '😄', '🎉', '😕', '❤️'],
   active: 'mine',
   scrollHeight: '270px',
   removeEmojis: ['🙂', '🙃', '☺️', '🤑', '🤓', '🤗', '🙄', '🤔', '🙁', '☹️', '🤐', '🤒',

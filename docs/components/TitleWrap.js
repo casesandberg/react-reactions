@@ -6,6 +6,7 @@ export const TitleWrap = ({ title, footer, children }) => {
     'default': {
       wrap: {
         position: 'relative',
+        fontFamily: 'Roboto, helvetica',
       },
       title: {
         position: 'absolute',

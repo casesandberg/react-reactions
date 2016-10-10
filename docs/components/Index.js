@@ -1,6 +1,12 @@
 import React from 'react'
 import reactCSS from 'reactcss'
 
+import Markdown from 'react-mark'
+import Code from './Code'
+import InlineCode from './InlineCode'
+
+import documentation from '../../README.md'
+
 import { FacebookCounter, FacebookSelector, GithubCounter, GithubSelector,
   PokemonSelector, SlackCounter, SlackSelector, YoutubeCounter } from 'react-reactions'
 import TitleWrap from './TitleWrap'
@@ -27,6 +33,13 @@ export const Index = (props) => {
         top: '0',
         right: '0',
         fill: '#999',
+      },
+      docs: {
+        display: 'flex',
+        justifyContent: 'center',
+      },
+      docsWrap: {
+        width: '690px',
       },
     },
   })
@@ -190,6 +203,12 @@ export const Index = (props) => {
       <Header color="#999">
         Docs
       </Header>
+
+      <div style={ styles.docs }>
+        <div style={ styles.docsWrap }>
+          <Markdown text={ documentation } replace={{ pre: Code, code: InlineCode }} />
+        </div>
+      </div>
     </div>
   )
 }
