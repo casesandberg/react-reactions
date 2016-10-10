@@ -65443,7 +65443,10 @@
 	  return obj && obj.__esModule ? obj : { default: obj };
 	}
 
+	/* eslint-disable no-shadow */
+
 	var SlackCounter = exports.SlackCounter = function SlackCounter(_ref) {
+	  var hover = _ref.hover;
 	  var counters = _ref.counters;
 	  var user = _ref.user;
 	  var onSelect = _ref.onSelect;
@@ -65471,7 +65474,7 @@
 	        opacity: '1'
 	      }
 	    }
-	  }, { hover: _reactcss.hover });
+	  }, { hover: hover });
 
 	  var groups = _lodash2.default.groupBy(counters, 'emoji');
 
