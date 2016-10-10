@@ -2,9 +2,9 @@ import ReactDOM from 'react-dom'
 import React from 'react'
 import '../node_modules/normalize.css/normalize.css'
 
-import Index from './components/Index'
+import Root from './components/Root'
 
 ReactDOM.render(
-  <Index />,
+  <Root />,
   document.getElementById('root')
 )

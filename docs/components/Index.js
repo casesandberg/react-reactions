@@ -6,7 +6,7 @@ import { FacebookCounter, FacebookSelector, GithubCounter, GithubSelector,
 import TitleWrap from './TitleWrap'
 import Header from './Header'
 
-export const Index = () => {
+export const Index = (props) => {
   const styles = reactCSS({
     'default': {
       index: {
@@ -31,7 +31,7 @@ export const Index = () => {
     },
   })
 
-  const handleSelect = (emoji) => console.log(emoji)
+  const handleSelect = (emoji) => props.onEmojiChange(emoji)
   const handleGithubAdd = () => console.log('POPUP GITHUB')
   const handleSlackAdd = () => console.log('POPUP SLACK')
   const handleLikeClick = () => console.log('LIKE CLICK')
@@ -73,13 +73,13 @@ export const Index = () => {
               </a>
             ) }
           >
-            <PokemonSelector onSelect={ handleSelect } />
+            <PokemonSelector />
           </TitleWrap>
 
           <div style={ styles.space } />
 
           <TitleWrap title="Facebook">
-            <FacebookSelector onSelect={ handleSelect } />
+            <FacebookSelector />
           </TitleWrap>
 
         </div>
