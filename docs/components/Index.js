@@ -1,7 +1,7 @@
 import React from 'react'
 import reactCSS from 'reactcss'
 
-import { FacebookSelector, GithubCounter, GithubSelector,
+import { FacebookCounter, FacebookSelector, GithubCounter, GithubSelector,
   PokemonSelector, SlackSelector } from 'react-reactions'
 
 export const Index = () => {
@@ -69,7 +69,29 @@ export const Index = () => {
           <br />
           <br />
           <br />
-          facebook
+          <FacebookCounter
+            counters={ [{
+              emoji: 'like',
+              by: 'Case Sandberg',
+            }, {
+              emoji: 'like',
+              by: 'Henry Boldizsar',
+            }, {
+              emoji: 'like',
+              by: 'Joseph Poon',
+            }, {
+              emoji: 'like',
+              by: 'Elizabeth Stark',
+            }, {
+              emoji: 'like',
+              by: 'Cameron Gillard',
+            }, {
+              emoji: 'love',
+              by: 'Rob Sandberg',
+            }] }
+            user="Case Sandberg"
+            important={ ['Henry Boldizsar', 'Rob Sandberg'] }
+          />
           <br />
           <br />
 

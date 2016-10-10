@@ -1,5 +1,6 @@
 import React from 'react'
 import reactCSS, { hover } from 'reactcss'
+import { listOfNames } from '../../helpers/strings'
 
 export const GithubCounterGroup = (props) => {
   const styles = reactCSS({
@@ -63,7 +64,7 @@ export const GithubCounterGroup = (props) => {
   return (
     <div style={ styles.group } onClick={ handleClick }>
       <span style={ styles.emoji }>{ props.emoji }</span> { props.count }
-      <div style={ styles.tooltip }>{ props.names.join(', ') }</div>
+      <div style={ styles.tooltip }>{ listOfNames(props.names) }</div>
     </div>
   )
 }
