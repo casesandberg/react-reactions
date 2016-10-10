@@ -1,8 +1,10 @@
+/* eslint-disable no-shadow */
+
 import React from 'react'
 import reactCSS, { hover } from 'reactcss'
 import { listOfNames } from '../../helpers/strings'
 
-export const SlackCounterGroup = ({ onSelect, emoji, count, names, active }) => {
+export const SlackCounterGroup = ({ hover, onSelect, emoji, count, names, active }) => {
   const styles = reactCSS({
     'default': {
       group: {
