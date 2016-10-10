@@ -45,10 +45,14 @@ export const GithubSelectorEmoji = (props) => {
     },
   }, props)
 
+  const handleClick = () => {
+    props.onSelect(props.label)
+  }
+
   return (
     <div style={ styles.wrap }>
       <div style={ styles.label }>{ props.label }</div>
-      <div style={ styles.icon } />
+      <div style={ styles.icon } onClick={ handleClick } />
     </div>
   )
 }

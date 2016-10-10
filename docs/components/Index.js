@@ -16,25 +16,29 @@ export const Index = () => {
     },
   })
 
+  const handleSelect = (emoji) => {
+    console.log(emoji)
+  }
+
   return (
     <div style={ styles.index }>
       <div style={ styles.githubSelector }>
-        <GithubSelector />
+        <GithubSelector onSelect={ handleSelect } />
         <br />
         <br />
         <br />
         <br />
-        <FacebookSelector />
+        <FacebookSelector onSelect={ handleSelect } />
         <br />
         <br />
         <br />
-        <PokemonSelector />
+        <PokemonSelector onSelect={ handleSelect } />
         <br />
         <br />
 
       </div>
       <div style={ styles.slack }>
-        <SlackSelector />
+        <SlackSelector onSelect={ handleSelect } />
       </div>
     </div>
   )

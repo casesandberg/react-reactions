@@ -29,6 +29,7 @@ export const SlackSelectorItems = (props) => {
             key="mine"
             slug="mine"
             emojis={ props.frequent }
+            onSelect={ props.onSelect }
           />
         ) : null }
         { _.map(emoji, (group, slug) => {
@@ -37,6 +38,7 @@ export const SlackSelectorItems = (props) => {
               key={ slug }
               slug={ slug }
               emojis={ _.without(group, ...props.removeEmojis) }
+              onSelect={ props.onSelect }
             />
           )
         }) }

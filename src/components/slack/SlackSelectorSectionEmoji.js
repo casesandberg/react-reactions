@@ -30,8 +30,12 @@ export const SlackSelectorSectionEmoji = (props) => {
     },
   }, props)
 
+  const handleClick = () => {
+    props.onSelect(props.emoji)
+  }
+
   return (
-    <div style={ styles.wrap }>
+    <div style={ styles.wrap } onClick={ handleClick }>
       <div style={ styles.emoji }>
         { props.emoji }
       </div>

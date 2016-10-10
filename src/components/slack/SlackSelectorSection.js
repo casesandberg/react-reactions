@@ -32,9 +32,10 @@ export const SlackSelectorSection = (props) => {
         { _.map(props.emojis, (emoji, i) => {
           return (
             <SlackSelectorSectionEmoji
+              key={ i }
               hoverColor={ emojiColors[i % emojiColors.length] }
               emoji={ emoji }
-              key={ i }
+              onSelect={ props.onSelect }
             />
           )
         }) }

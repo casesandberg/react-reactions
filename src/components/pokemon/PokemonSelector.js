@@ -8,6 +8,7 @@ export const PokemonSelector = (props) => {
       reactions={ props.reactions }
       variant="pokemon"
       iconSize={ props.iconSize }
+      onSelect={ props.onSelect }
     />
   )
 }

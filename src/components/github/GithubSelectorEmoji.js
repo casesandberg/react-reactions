@@ -32,8 +32,12 @@ export const GithubSelectorEmoji = (props) => {
     },
   }, props)
 
+  const handleClick = () => {
+    props.onSelect(props.shortcode)
+  }
+
   return (
-    <div style={ styles.wrap }>
+    <div style={ styles.wrap } onClick={ handleClick }>
       <div style={ styles.emoji }>
         { props.shortcode }
       </div>

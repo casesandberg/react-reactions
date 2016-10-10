@@ -28,8 +28,12 @@ export const SlackSelector = (props) => {
     <div style={ styles.menu }>
       <SlackSelectorCSS />
       <SlackSelectorHeader active={ props.active } />
-      <SlackSelectorItems removeEmojis={ props.removeEmojis } frequent={ props.frequent } />
-      <SlackSelectorFooter />
+      <SlackSelectorItems
+        removeEmojis={ props.removeEmojis }
+        frequent={ props.frequent }
+        onSelect={ props.onSelect }
+      />
+      <SlackSelectorFooter onSelect={ props.onSelect } />
     </div>
   )
 }

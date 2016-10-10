@@ -29,6 +29,7 @@ export const FacebookSelector = (props) => {
             <FacebookSelectorEmoji
               icon={ icons.find(props.variant, reaction) }
               label={ reaction }
+              onSelect={ props.onSelect }
             />
           </div>
         )

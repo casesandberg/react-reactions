@@ -40,7 +40,13 @@ export const GithubSelector = (props) => {
       <div style={ styles.divider } />
       <div style={ styles.emoji }>
         { _.map(props.reactions, (reaction, i) => {
-          return <GithubSelectorEmoji shortcode={ reaction } key={ i } />
+          return (
+            <GithubSelectorEmoji
+              key={ i }
+              shortcode={ reaction }
+              onSelect={ props.onSelect }
+            />
+          )
         }) }
       </div>
     </div>
