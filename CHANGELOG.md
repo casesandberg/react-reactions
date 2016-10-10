@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.2 (10 October 2016)
+
+- Fix SlackCounterGroup label hover
+
 ## 0.1.1 (10 October 2016)
 
 - Added lodash babel plugin for smaller lib and docs build
