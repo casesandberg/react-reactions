@@ -1,10 +1,12 @@
+/* eslint-disable no-shadow */
+
 import React from 'react'
 import reactCSS, { hover } from 'reactcss'
 import _ from 'lodash'
 
 import SlackCounterGroup from './SlackCounterGroup'
 
-export const SlackCounter = ({ counters, user, onSelect, onAdd }) => {
+export const SlackCounter = ({ hover, counters, user, onSelect, onAdd }) => {
   const styles = reactCSS({
     'default': {
       counter: {
