@@ -3,7 +3,7 @@ import reactCSS from 'reactcss'
 
 import YoutubeCounterButton from './YoutubeCounterButton'
 
-export const YoutubeCounter = ({ like, dislike }) => {
+export const YoutubeCounter = ({ like, dislike, onLikeClick, onDislikeClick }) => {
   const styles = reactCSS({
     'default': {
       counter: {
@@ -15,6 +15,9 @@ export const YoutubeCounter = ({ like, dislike }) => {
     },
   })
 
+  const handleLikeClick = () => onLikeClick()
+  const handleDislikeClick = () => onDislikeClick()
+
 
   return (
     <div style={ styles.counter }>
@@ -22,12 +25,14 @@ export const YoutubeCounter = ({ like, dislike }) => {
         number={ like }
         position="-66px -69px"
         tooltip="I like this"
+        onClick={ handleLikeClick }
       />
       <div style={ styles.space } />
       <YoutubeCounterButton
         number={ dislike }
         position="-390px -148px"
         tooltip="I dislike this"
+        onClick={ handleDislikeClick }
       />
     </div>
   )

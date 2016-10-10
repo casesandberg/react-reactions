@@ -39,7 +39,7 @@ export const FacebookCounter = (props) => {
 
 
   return (
-    <div style={ styles.counter }>
+    <div style={ styles.counter } onClick={ props.onClick }>
       { _.map(_.keys(groups), (reaction, i, reactions) => {
         return (
           <FacebookCounterReaction

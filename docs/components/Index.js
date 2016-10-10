@@ -17,13 +17,12 @@ export const Index = () => {
     },
   })
 
-  const handleSelect = (emoji) => {
-    console.log(emoji)
-  }
-
-  const handleGithubAdd = () => {
-    console.log('POPUP GITHUB')
-  }
+  const handleSelect = (emoji) => console.log(emoji)
+  const handleGithubAdd = () => console.log('POPUP GITHUB')
+  const handleSlackAdd = () => console.log('POPUP SLACK')
+  const handleLikeClick = () => console.log('LIKE CLICK')
+  const handleDislikeClick = () => console.log('DISLIKE CLICK')
+  const handleFacebookClick = () => console.log('FACEBOOK CLICK')
 
   return (
     <div>
@@ -91,13 +90,19 @@ export const Index = () => {
             }] }
             user="Case Sandberg"
             important={ ['Henry Boldizsar', 'Rob Sandberg'] }
+            onClick={ handleFacebookClick }
           />
           <br />
           <br />
 
         </div>
         <div style={ styles.slack }>
-          <YoutubeCounter like="135757" dislike="1638" />
+          <YoutubeCounter
+            like="135757"
+            dislike="1638"
+            onLikeClick={ handleLikeClick }
+            onDislikeClick={ handleDislikeClick }
+          />
           <br />
           <br />
           <SlackCounter
@@ -118,7 +123,7 @@ export const Index = () => {
               by: 'henry',
             }] }
             user="case"
-            onAdd={ handleGithubAdd }
+            onAdd={ handleSlackAdd }
             onSelect={ handleSelect }
           />
         </div>

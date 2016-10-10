@@ -50,10 +50,7 @@ export const SlackCounter = (props) => {
       }) }
       <div style={ styles.add } onClick={ props.onAdd }>
 
-        <SlackCounterGroup
-          emoji={ '' }
-          onSelect={ props.onSelect }
-        />
+        <SlackCounterGroup emoji={ '' } />
       </div>
     </div>
   )

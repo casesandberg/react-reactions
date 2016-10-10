@@ -66,7 +66,7 @@ export const SlackCounterGroup = (props) => {
   }, { 'hover': props.hover, 'active': props.active || props.hover, 'no-names': !props.names })
 
   const handleClick = () => {
-    props.onSelect(props.emoji)
+    props.onSelect && props.onSelect(props.emoji)
   }
 
   return (

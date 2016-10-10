@@ -1,7 +1,7 @@
 import React from 'react'
 import reactCSS, { hover } from 'reactcss'
 
-export const YoutubeCounterButton = ({ position, number, hover, tooltip }) => {
+export const YoutubeCounterButton = ({ position, number, hover, tooltip, onClick }) => {
   const styles = reactCSS({
     'default': {
       button: {
@@ -48,7 +48,7 @@ export const YoutubeCounterButton = ({ position, number, hover, tooltip }) => {
 
 
   return (
-    <div style={ styles.button }>
+    <div style={ styles.button } onClick={ onClick }>
       <div style={ styles.icon } />
       { parseInt(number, 10).toLocaleString() }
       <div style={ styles.tooltip }>{ tooltip }</div>
