@@ -2,7 +2,7 @@ import React from 'react'
 import reactCSS from 'reactcss'
 
 import { FacebookCounter, FacebookSelector, GithubCounter, GithubSelector,
-  PokemonSelector, SlackSelector } from 'react-reactions'
+  PokemonSelector, SlackCounter, SlackSelector } from 'react-reactions'
 
 export const Index = () => {
   const styles = reactCSS({
@@ -98,7 +98,27 @@ export const Index = () => {
         </div>
         <div style={ styles.slack }>
           youtube
-          slack
+          <SlackCounter
+            counters={ [{
+              emoji: '🌊',
+              by: 'roasbeef',
+            }, {
+              emoji: '🗿',
+              by: 'case',
+            }, {
+              emoji: '🗿',
+              by: 'joseph',
+            }, {
+              emoji: '🌊',
+              by: 'stark',
+            }, {
+              emoji: '💪',
+              by: 'henry',
+            }] }
+            user="case"
+            onAdd={ handleGithubAdd }
+            onSelect={ handleSelect }
+          />
         </div>
       </div>
     </div>
