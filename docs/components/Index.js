@@ -186,6 +186,10 @@ export const Index = (props) => {
           </TitleWrap>
         </div>
       </div>
+
+      <Header color="#999">
+        Docs
+      </Header>
     </div>
   )
 }

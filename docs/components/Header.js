@@ -1,12 +1,12 @@
 import React from 'react'
 import reactCSS from 'reactcss'
 
-export const Header = ({ children }) => {
+export const Header = ({ children, color }) => {
   const styles = reactCSS({
     'default': {
       header: {
         fontFamily: 'Roboto',
-        color: '#FF611A',
+        color,
         fontSize: '32px',
         fontWeight: '500',
         padding: '70px 0',
@@ -21,6 +21,10 @@ export const Header = ({ children }) => {
       { children }
     </div>
   )
+}
+
+Header.defaultProps = {
+  color: '#FF611A',
 }
 
 export default Header
