@@ -1,7 +1,8 @@
 import React from 'react'
 import reactCSS from 'reactcss'
 
-import { FacebookSelector, GithubSelector, PokemonSelector, SlackSelector } from 'react-reactions'
+import { FacebookSelector, GithubCounter, GithubSelector,
+  PokemonSelector, SlackSelector } from 'react-reactions'
 
 export const Index = () => {
   const styles = reactCSS({
@@ -20,25 +21,63 @@ export const Index = () => {
     console.log(emoji)
   }
 
-  return (
-    <div style={ styles.index }>
-      <div style={ styles.githubSelector }>
-        <GithubSelector onSelect={ handleSelect } />
-        <br />
-        <br />
-        <br />
-        <br />
-        <FacebookSelector onSelect={ handleSelect } />
-        <br />
-        <br />
-        <br />
-        <PokemonSelector onSelect={ handleSelect } />
-        <br />
-        <br />
+  const handleGithubAdd = () => {
+    console.log('POPUP GITHUB')
+  }
 
+  return (
+    <div>
+      <div style={ styles.index }>
+        <div style={ styles.githubSelector }>
+          <GithubSelector onSelect={ handleSelect } />
+          <br />
+          <br />
+          <br />
+          <br />
+          <FacebookSelector onSelect={ handleSelect } />
+          <br />
+          <br />
+          <br />
+          <PokemonSelector onSelect={ handleSelect } />
+          <br />
+          <br />
+
+        </div>
+        <div style={ styles.slack }>
+          <SlackSelector onSelect={ handleSelect } />
+        </div>
       </div>
-      <div style={ styles.slack }>
-        <SlackSelector onSelect={ handleSelect } />
+      <div style={ styles.index }>
+        <div style={ styles.githubSelector }>
+          <div style={{ width: '230px' }}>
+            <GithubCounter
+              counters={ [{
+                emoji: '👍',
+                by: 'case',
+              }, {
+                emoji: '👍',
+                by: 'roasbeef',
+              }, {
+                emoji: '❤️',
+                by: 'joseph',
+              }] }
+              user="case"
+              onAdd={ handleGithubAdd }
+              onSelect={ handleSelect }
+            />
+          </div>
+          <br />
+          <br />
+          <br />
+          facebook
+          <br />
+          <br />
+
+        </div>
+        <div style={ styles.slack }>
+          youtube
+          slack
+        </div>
       </div>
     </div>
   )
