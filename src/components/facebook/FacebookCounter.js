@@ -19,6 +19,7 @@ export const FacebookCounter = (props) => {
       },
       name: {
         paddingLeft: '4px',
+        marginTop: '2px',
       },
     },
   })

@@ -11,7 +11,6 @@ export const SlackSelector = (props) => {
     'default': {
       menu: {
         fontFamily: '"Helvetica Neue",Helvetica,"Segoe UI",Tahoma,Arial,sans-serif',
-        position: 'absolute',
         width: '358px',
         color: '#555459',
         fontSize: '.95rem',

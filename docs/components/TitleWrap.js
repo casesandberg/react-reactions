@@ -10,9 +10,9 @@ export const TitleWrap = ({ title, footer, children }) => {
       title: {
         position: 'absolute',
         textTransform: 'uppercase',
-        fontSize: '13px',
-        color: '#999',
-        top: '-20px',
+        fontSize: '12px',
+        color: '#bbb',
+        top: '-22px',
         WebkitFontSmoothing: 'antialiased',
       },
       footer: {
