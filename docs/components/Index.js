@@ -2,7 +2,7 @@ import React from 'react'
 import reactCSS from 'reactcss'
 
 import { FacebookCounter, FacebookSelector, GithubCounter, GithubSelector,
-  PokemonSelector, SlackCounter, SlackSelector } from 'react-reactions'
+  PokemonSelector, SlackCounter, SlackSelector, YoutubeCounter } from 'react-reactions'
 
 export const Index = () => {
   const styles = reactCSS({
@@ -97,7 +97,9 @@ export const Index = () => {
 
         </div>
         <div style={ styles.slack }>
-          youtube
+          <YoutubeCounter like="135757" dislike="1638" />
+          <br />
+          <br />
           <SlackCounter
             counters={ [{
               emoji: '🌊',
