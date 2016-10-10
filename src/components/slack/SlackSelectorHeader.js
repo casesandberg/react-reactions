@@ -15,7 +15,7 @@ export const SlackSelectorHeader = ({ tabs, active }) => {
     },
   })
 
-  const handleClick = (id) => document.getElementById(id).scrollIntoView(true)
+  const handleClick = (id) => document.getElementById(id).scrollIntoView(false)
 
   return (
     <div style={ styles.header }>

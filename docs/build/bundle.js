@@ -14110,6 +14110,7 @@
 	}
 
 	var SlackCounterGroup = exports.SlackCounterGroup = function SlackCounterGroup(_ref) {
+	  var hover = _ref.hover;
 	  var onSelect = _ref.onSelect;
 	  var emoji = _ref.emoji;
 	  var count = _ref.count;
@@ -14176,14 +14177,14 @@
 	        paddingRight: '0'
 	      }
 	    }
-	  }, { hover: _reactcss.hover, 'active': active || _reactcss.hover, 'no-names': !names });
+	  }, { hover: hover, 'active': active || hover, 'no-names': !names });
 
 	  var handleClick = function handleClick() {
 	    onSelect && onSelect(emoji);
 	  };
 
 	  return _react2.default.createElement('div', { style: styles.group, onClick: handleClick }, _react2.default.createElement('span', { style: styles.emoji }, emoji), ' ', count, names ? _react2.default.createElement('div', { style: styles.tooltip }, (0, _strings.listOfNames)(names)) : null);
-	};
+	}; /* eslint-disable no-shadow */
 
 	exports.default = (0, _reactcss.hover)(SlackCounterGroup);
 
