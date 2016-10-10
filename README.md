@@ -3,13 +3,13 @@
 * **4 Different Selectors** - Slack, Facebook, Pokemon and Github
 * **4 Different Counters** - Github, Youtube, Facebook and Slack
 
----
+Install via npm:
 
 ```
 npm install react-reactions --save
 ```
 
-## Selectors
+# Selectors
 
 ### Slack
 ```
@@ -97,7 +97,7 @@ const Component = () => {
 
 ---
 
-## Counters
+# Counters
 
 ### Github
 ```
