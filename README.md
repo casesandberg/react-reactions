@@ -215,3 +215,5 @@ const Component = () => {
 ---
 
 > 100% inline styles via [ReactCSS](http://reactcss.com/)
+
+> Pokemon Illustrations by [Chris Owens](https://dribbble.com/monkee1895)
