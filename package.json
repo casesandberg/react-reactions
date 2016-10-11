@@ -1,7 +1,7 @@
 {
   "name": "react-reactions",
   "version": "0.1.3",
-  "description": "",
+  "description": "Reaction pickers and counters from Slack, Pokemon, Github, Facebook & Youtube",
   "main": "lib/index.js",
   "scripts": {
     "start": "webpack-dev-server --config ./webpack.config.dev.js --port 2570 --quiet",
@@ -19,7 +19,20 @@
   "bugs": {
     "url": "https://github.com/casesandberg/react-reactions/issues"
   },
-  "homepage": "https://github.com/casesandberg/react-reactions#readme",
+  "homepage": "https://casesandberg.github.io/react-reactions/",
+  "keywords": [
+    "react",
+    "reactions",
+    "reaction picker",
+    "react-component",
+    "reactionpicker",
+    "slack",
+    "pokemon",
+    "github",
+    "facebook",
+    "youtube",
+    "popup"
+  ],
   "devDependencies": {
     "autoprefixer": "^6.4.0",
     "babel": "^6.5.2",
