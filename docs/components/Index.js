@@ -1,5 +1,6 @@
 import React from 'react'
 import reactCSS from 'reactcss'
+import icons from '../../src/helpers/icons'
 
 import Markdown from 'react-mark'
 import Code from './Code'
@@ -45,6 +46,8 @@ export const Index = (props) => {
   })
 
   const handleSelect = (emoji) => props.onEmojiChange(emoji)
+  const handleFBSelect = (name) => props.onEmojiChange(icons.find('facebook', name))
+  const handlePMSelect = (name) => props.onEmojiChange(icons.find('pokemon', name))
   const handleGithubAdd = () => console.log('POPUP GITHUB')
   const handleSlackAdd = () => console.log('POPUP SLACK')
   const handleLikeClick = () => console.log('LIKE CLICK')
@@ -86,13 +89,13 @@ export const Index = (props) => {
               </a>
             ) }
           >
-            <PokemonSelector />
+            <PokemonSelector onSelect={ handlePMSelect } />
           </TitleWrap>
 
           <div style={ styles.space } />
 
           <TitleWrap title="Facebook">
-            <FacebookSelector />
+            <FacebookSelector onSelect={ handleFBSelect } />
           </TitleWrap>
 
         </div>

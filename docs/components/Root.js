@@ -43,6 +43,13 @@ export class Root extends React.Component {
           opacity: '0',
           transition: 'all 100ms ease-out',
         },
+        image: {
+          width: '26px',
+          height: '26px',
+          backgroundImage: `url(${ this.state.emoji })`,
+          backgroundSize: '100%',
+          marginTop: '25%',
+        },
       },
       'visible': {
         popup: {
@@ -55,7 +62,11 @@ export class Root extends React.Component {
     return (
       <div>
         <Index onEmojiChange={ this.handleEmojiChange } />
-        <div style={ styles.popup }>{ this.state.emoji }</div>
+        <div style={ styles.popup }>
+          { this.state.emoji.length < 5 ? this.state.emoji : (
+            <div style={ styles.image } />
+          ) }
+        </div>
       </div>
     )
   }
