@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.3 (10 October 2016)
+
+- Add 2nd important to FacebookCounter
+
 ## 0.1.2 (10 October 2016)
 
 - Fix SlackCounterGroup label hover
