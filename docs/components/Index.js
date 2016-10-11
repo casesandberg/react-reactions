@@ -23,6 +23,7 @@ export const Index = (props) => {
       },
       githubSelector: {
         marginRight: '40px',
+        maxWidth: '292px',
       },
       space: {
         height: '60px',
@@ -30,10 +31,16 @@ export const Index = (props) => {
       githubLink: {
         padding: '15px',
         width: '24px',
-        position: 'absolute',
+        position: 'fixed',
         top: '0',
         right: '0',
-        fill: '#999',
+        fill: 'rgba(0,0,0,.3)',
+        cursor: 'pointer',
+      },
+      slack: {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'flex-end',
       },
       docs: {
         display: 'flex',
@@ -41,6 +48,34 @@ export const Index = (props) => {
       },
       docsWrap: {
         width: '690px',
+      },
+      cover: {
+        position: 'absolute',
+        background: 'rgba(255, 97, 26, 0.5)',
+        top: '0',
+        left: '0',
+        right: '0',
+        height: '405px',
+      },
+      head: {
+        position: 'relative',
+        fontFamily: 'Roboto, Helvetica',
+      },
+      title: {
+        fontSize: '52px',
+        color: '#fff',
+        whiteSpace: 'nowrap',
+      },
+      subtitle: {
+        fontSize: '20px',
+        lineHeight: '27px',
+        color: 'rgba(0, 0, 0, 0.4)',
+        padding: '37px 0',
+        fontWeight: '300',
+        maxWidth: '292px',
+      },
+      stars: {
+        height: '30px',
       },
     },
   })
@@ -56,6 +91,8 @@ export const Index = (props) => {
 
   return (
     <div>
+      <div style={ styles.space } />
+      <div style={ styles.cover } />
 
       <a style={ styles.githubLink } href="https://github.com/casesandberg/react-reactions" target="__blank">
         <svg viewBox="0 0 24 24">
@@ -63,17 +100,24 @@ export const Index = (props) => {
         </svg>
       </a>
 
-      <Header>
-        React Reactions
-        <div style={{ width: '30px' }} />
-        <iframe src="https://ghbtns.com/github-btn.html?user=casesandberg&repo=react-reactions&type=star&count=true&size=large" scrolling="0" width="160px" height="30px" frameBorder="0"></iframe>
-      </Header>
       <div style={ styles.index }>
         <div style={ styles.githubSelector }>
 
-          <TitleWrap title="Github">
-            <GithubSelector onSelect={ handleSelect } />
-          </TitleWrap>
+          <div style={ styles.head }>
+            <div style={ styles.title }>React Reactions</div>
+            <div style={ styles.subtitle }>
+              Reaction pickers and counters from Slack, Pokemon, Github, Facebook & Youtube
+            </div>
+            <div style={ styles.stars }>
+              <iframe
+                src="https://ghbtns.com/github-btn.html?user=casesandberg&repo=react-reactions&type=star&count=true&size=large"
+                scrolling="0"
+                width="160px"
+                height="30px"
+                frameBorder="0"
+              ></iframe>
+            </div>
+          </div>
 
           <div style={ styles.space } />
 
@@ -100,6 +144,12 @@ export const Index = (props) => {
 
         </div>
         <div style={ styles.slack }>
+          <TitleWrap title="Github">
+            <GithubSelector onSelect={ handleSelect } />
+          </TitleWrap>
+
+          <div style={ styles.space } />
+
           <TitleWrap title="Slack">
             <SlackSelector scrollHeight="213px" onSelect={ handleSelect } />
           </TitleWrap>

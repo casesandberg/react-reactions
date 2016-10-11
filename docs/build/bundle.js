@@ -12925,7 +12925,8 @@
 	        justifyContent: 'center'
 	      },
 	      githubSelector: {
-	        marginRight: '40px'
+	        marginRight: '40px',
+	        maxWidth: '292px'
 	      },
 	      space: {
 	        height: '60px'
@@ -12933,10 +12934,16 @@
 	      githubLink: {
 	        padding: '15px',
 	        width: '24px',
-	        position: 'absolute',
+	        position: 'fixed',
 	        top: '0',
 	        right: '0',
-	        fill: '#999'
+	        fill: 'rgba(0,0,0,.3)',
+	        cursor: 'pointer'
+	      },
+	      slack: {
+	        display: 'flex',
+	        flexDirection: 'column',
+	        alignItems: 'flex-end'
 	      },
 	      docs: {
 	        display: 'flex',
@@ -12944,6 +12951,34 @@
 	      },
 	      docsWrap: {
 	        width: '690px'
+	      },
+	      cover: {
+	        position: 'absolute',
+	        background: 'rgba(255, 97, 26, 0.5)',
+	        top: '0',
+	        left: '0',
+	        right: '0',
+	        height: '405px'
+	      },
+	      head: {
+	        position: 'relative',
+	        fontFamily: 'Roboto, Helvetica'
+	      },
+	      title: {
+	        fontSize: '52px',
+	        color: '#fff',
+	        whiteSpace: 'nowrap'
+	      },
+	      subtitle: {
+	        fontSize: '20px',
+	        lineHeight: '27px',
+	        color: 'rgba(0, 0, 0, 0.4)',
+	        padding: '37px 0',
+	        fontWeight: '300',
+	        maxWidth: '292px'
+	      },
+	      stars: {
+	        height: '30px'
 	      }
 	    }
 	  });
@@ -12976,6 +13011,8 @@
 	  return _react2.default.createElement(
 	    'div',
 	    null,
+	    _react2.default.createElement('div', { style: styles.space }),
+	    _react2.default.createElement('div', { style: styles.cover }),
 	    _react2.default.createElement(
 	      'a',
 	      { style: styles.githubLink, href: 'https://github.com/casesandberg/react-reactions', target: '__blank' },
@@ -12986,22 +13023,35 @@
 	      )
 	    ),
 	    _react2.default.createElement(
-	      _Header2.default,
-	      null,
-	      'React Reactions',
-	      _react2.default.createElement('div', { style: { width: '30px' } }),
-	      _react2.default.createElement('iframe', { src: 'https://ghbtns.com/github-btn.html?user=casesandberg&repo=react-reactions&type=star&count=true&size=large', scrolling: '0', width: '160px', height: '30px', frameBorder: '0' })
-	    ),
-	    _react2.default.createElement(
 	      'div',
 	      { style: styles.index },
 	      _react2.default.createElement(
 	        'div',
 	        { style: styles.githubSelector },
 	        _react2.default.createElement(
-	          _TitleWrap2.default,
-	          { title: 'Github' },
-	          _react2.default.createElement(_reactReactions.GithubSelector, { onSelect: handleSelect })
+	          'div',
+	          { style: styles.head },
+	          _react2.default.createElement(
+	            'div',
+	            { style: styles.title },
+	            'React Reactions'
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { style: styles.subtitle },
+	            'Reaction pickers and counters from Slack, Pokemon, Github, Facebook & Youtube'
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { style: styles.stars },
+	            _react2.default.createElement('iframe', {
+	              src: 'https://ghbtns.com/github-btn.html?user=casesandberg&repo=react-reactions&type=star&count=true&size=large',
+	              scrolling: '0',
+	              width: '160px',
+	              height: '30px',
+	              frameBorder: '0'
+	            })
+	          )
 	        ),
 	        _react2.default.createElement('div', { style: styles.space }),
 	        _react2.default.createElement(
@@ -13030,6 +13080,12 @@
 	      _react2.default.createElement(
 	        'div',
 	        { style: styles.slack },
+	        _react2.default.createElement(
+	          _TitleWrap2.default,
+	          { title: 'Github' },
+	          _react2.default.createElement(_reactReactions.GithubSelector, { onSelect: handleSelect })
+	        ),
+	        _react2.default.createElement('div', { style: styles.space }),
 	        _react2.default.createElement(
 	          _TitleWrap2.default,
 	          { title: 'Slack' },
@@ -13366,14 +13422,14 @@
 	        position: 'absolute',
 	        textTransform: 'uppercase',
 	        fontSize: '12px',
-	        color: '#bbb',
+	        color: 'rgba(0,0,0,.25)',
 	        top: '-22px',
 	        WebkitFontSmoothing: 'antialiased'
 	      },
 	      footer: {
 	        position: 'absolute',
 	        fontSize: '11px',
-	        color: '#aaa',
+	        color: 'rgba(0,0,0,.2)',
 	        bottom: '-20px',
 	        right: '0',
 	        WebkitFontSmoothing: 'antialiased'
