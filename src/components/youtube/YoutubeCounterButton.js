@@ -3,7 +3,7 @@
 import React from 'react'
 import reactCSS, { hover } from 'reactcss'
 
-export const YoutubeCounterButton = ({ position, number, hover, tooltip, onClick }) => {
+export const YoutubeCounterButton = ({ position, number, hover, tooltip, onClick, active, activeColor }) => {
   const styles = reactCSS({
     'default': {
       button: {
@@ -46,7 +46,12 @@ export const YoutubeCounterButton = ({ position, number, hover, tooltip, onClick
         opacity: '1',
       },
     },
-  }, { hover })
+    'active': {
+      button: {
+        opacity: '1',
+      },
+    },
+  }, { hover, active })
 
 
   return (

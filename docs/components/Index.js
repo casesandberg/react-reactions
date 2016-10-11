@@ -9,9 +9,10 @@ import InlineCode from './InlineCode'
 import documentation from '../../README.md'
 
 import { FacebookCounter, FacebookSelector, GithubCounter, GithubSelector,
-  PokemonSelector, SlackCounter, SlackSelector, YoutubeCounter } from 'react-reactions'
+  PokemonSelector, SlackCounter, SlackSelector } from 'react-reactions'
 import TitleWrap from './TitleWrap'
 import Header from './Header'
+import Youtube from '../../examples/Youtube'
 
 export const Index = (props) => {
   const styles = reactCSS({
@@ -216,12 +217,7 @@ export const Index = (props) => {
 
           <TitleWrap title="Youtube">
             <div style={{ height: '38px' }}>
-              <YoutubeCounter
-                like="135757"
-                dislike="1638"
-                onLikeClick={ handleLikeClick }
-                onDislikeClick={ handleDislikeClick }
-              />
+              <Youtube />
             </div>
           </TitleWrap>
 
