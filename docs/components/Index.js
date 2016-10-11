@@ -8,13 +8,13 @@ import InlineCode from './InlineCode'
 
 import documentation from '../../README.md'
 
-import { FacebookCounter, FacebookSelector, GithubSelector,
-  PokemonSelector, SlackSelector } from 'react-reactions'
+import { FacebookSelector, GithubSelector, PokemonSelector, SlackSelector } from 'react-reactions'
 import TitleWrap from './TitleWrap'
 import Header from './Header'
 import Youtube from '../../examples/Youtube'
 import Github from '../../examples/Github'
 import Slack from '../../examples/Slack'
+import Facebook from '../../examples/Facebook'
 
 export const Index = (props) => {
   const styles = reactCSS({
@@ -175,30 +175,7 @@ export const Index = (props) => {
           <div style={ styles.space } />
 
           <TitleWrap title="Facebook">
-            <FacebookCounter
-              counters={ [{
-                emoji: 'like',
-                by: 'Case Sandberg',
-              }, {
-                emoji: 'like',
-                by: 'Henry Boldizsar',
-              }, {
-                emoji: 'like',
-                by: 'Joseph Poon',
-              }, {
-                emoji: 'like',
-                by: 'Elizabeth Stark',
-              }, {
-                emoji: 'like',
-                by: 'Cameron Gillard',
-              }, {
-                emoji: 'love',
-                by: 'Rob Sandberg',
-              }] }
-              bg="#fafafa"
-              user="Case Sandberg"
-              important={ ['Henry Boldizsar', 'Rob Sandberg'] }
-            />
+            <Facebook />
           </TitleWrap>
         </div>
 
