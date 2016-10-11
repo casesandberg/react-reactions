@@ -9,7 +9,7 @@ export const Header = ({ children, color }) => {
         color,
         fontSize: '32px',
         fontWeight: '500',
-        padding: '70px 0',
+        padding: '40px 0',
         display: 'flex',
         justifyContent: 'center',
       },
