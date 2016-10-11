@@ -1,18 +1,24 @@
 import React from 'react'
 import _ from 'lodash'
-import { GithubCounter, GithubSelector } from 'react-reactions'
+import { SlackCounter, SlackSelector } from 'react-reactions'
 
-export class Github extends React.Component {
+export class Slack extends React.Component {
   state = {
     counters: [{
-      emoji: '👍',
-      by: 'case',
-    }, {
-      emoji: '👍',
+      emoji: '🌊',
       by: 'roasbeef',
     }, {
-      emoji: '❤️',
+      emoji: '🗿',
+      by: 'case',
+    }, {
+      emoji: '🗿',
       by: 'joseph',
+    }, {
+      emoji: '🌊',
+      by: 'stark',
+    }, {
+      emoji: '💪',
+      by: 'henry',
     }],
     user: 'case',
     showSelector: false,
@@ -38,7 +44,7 @@ export class Github extends React.Component {
   render() {
     return (
       <div style={{ position: 'relative' }}>
-        <GithubCounter
+        <SlackCounter
           counters={ this.state.counters }
           user={ this.state.user }
           onAdd={ this.handleAdd }
@@ -47,7 +53,7 @@ export class Github extends React.Component {
 
       { this.state.showSelector ? (
         <div style={{ position: 'absolute', bottom: '100%', marginBottom: '10px' }}>
-          <GithubSelector onSelect={ this.handleSelect } />
+          <SlackSelector onSelect={ this.handleSelect } />
         </div>
       ) : null }
       </div>
@@ -55,4 +61,4 @@ export class Github extends React.Component {
   }
 }
 
-export default Github
+export default Slack

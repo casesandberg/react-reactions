@@ -8,12 +8,13 @@ import InlineCode from './InlineCode'
 
 import documentation from '../../README.md'
 
-import { FacebookCounter, FacebookSelector, GithubCounter, GithubSelector,
-  PokemonSelector, SlackCounter, SlackSelector } from 'react-reactions'
+import { FacebookCounter, FacebookSelector, GithubSelector,
+  PokemonSelector, SlackSelector } from 'react-reactions'
 import TitleWrap from './TitleWrap'
 import Header from './Header'
 import Youtube from '../../examples/Youtube'
 import Github from '../../examples/Github'
+import Slack from '../../examples/Slack'
 
 export const Index = (props) => {
   const styles = reactCSS({
@@ -94,11 +95,6 @@ export const Index = (props) => {
   const handleSelect = (emoji) => props.onEmojiChange(emoji)
   const handleFBSelect = (name) => props.onEmojiChange(icons.find('facebook', name))
   const handlePMSelect = (name) => props.onEmojiChange(icons.find('pokemon', name))
-  const handleGithubAdd = () => console.log('POPUP GITHUB')
-  const handleSlackAdd = () => console.log('POPUP SLACK')
-  const handleLikeClick = () => console.log('LIKE CLICK')
-  const handleDislikeClick = () => console.log('DISLIKE CLICK')
-  const handleFacebookClick = () => console.log('FACEBOOK CLICK')
 
   return (
     <div>
@@ -202,7 +198,6 @@ export const Index = (props) => {
               bg="#fafafa"
               user="Case Sandberg"
               important={ ['Henry Boldizsar', 'Rob Sandberg'] }
-              onClick={ handleFacebookClick }
             />
           </TitleWrap>
         </div>
@@ -218,27 +213,7 @@ export const Index = (props) => {
           <div style={ styles.space } />
 
           <TitleWrap title="Slack">
-            <SlackCounter
-              counters={ [{
-                emoji: '🌊',
-                by: 'roasbeef',
-              }, {
-                emoji: '🗿',
-                by: 'case',
-              }, {
-                emoji: '🗿',
-                by: 'joseph',
-              }, {
-                emoji: '🌊',
-                by: 'stark',
-              }, {
-                emoji: '💪',
-                by: 'henry',
-              }] }
-              user="case"
-              onAdd={ handleSlackAdd }
-              onSelect={ handleSelect }
-            />
+            <Slack />
           </TitleWrap>
         </div>
       </div>
