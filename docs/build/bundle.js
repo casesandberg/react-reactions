@@ -14062,6 +14062,9 @@
 	    if ((0, _includes3.default)(names, important[0])) {
 	      nameString.push(important[0]);
 	    }
+	    if ((0, _includes3.default)(names, important[1])) {
+	      nameString.push(important[1]);
+	    }
 	  }
 	  nameString.push(names.length - nameString.length + ' others');
 
@@ -14999,7 +15002,7 @@
 	  });
 
 	  var handleClick = function handleClick(id) {
-	    return document.getElementById(id).scrollIntoView(true);
+	    return document.getElementById(id).scrollIntoView(false);
 	  };
 
 	  return _react2.default.createElement('div', { style: styles.header }, (0, _map3.default)(tabs, function (tab) {
@@ -15305,6 +15308,8 @@
 	  var dislike = _ref.dislike;
 	  var onLikeClick = _ref.onLikeClick;
 	  var onDislikeClick = _ref.onDislikeClick;
+	  var didLike = _ref.didLike;
+	  var didDislike = _ref.didDislike;
 
 	  var styles = (0, _reactcss2.default)({
 	    'default': {
@@ -15328,12 +15333,14 @@
 	    number: like,
 	    position: '-66px -69px',
 	    tooltip: 'I like this',
-	    onClick: handleLikeClick
+	    onClick: handleLikeClick,
+	    active: didLike
 	  }), _react2.default.createElement('div', { style: styles.space }), _react2.default.createElement(_YoutubeCounterButton2.default, {
 	    number: dislike,
 	    position: '-390px -148px',
 	    tooltip: 'I dislike this',
-	    onClick: handleDislikeClick
+	    onClick: handleDislikeClick,
+	    active: didDislike
 	  }));
 	};
 
@@ -15370,6 +15377,8 @@
 	  var hover = _ref.hover;
 	  var tooltip = _ref.tooltip;
 	  var onClick = _ref.onClick;
+	  var active = _ref.active;
+	  var activeColor = _ref.activeColor;
 
 	  var styles = (0, _reactcss2.default)({
 	    'default': {
@@ -15412,8 +15421,13 @@
 	      tooltip: {
 	        opacity: '1'
 	      }
+	    },
+	    'active': {
+	      button: {
+	        opacity: '1'
+	      }
 	    }
-	  }, { hover: hover });
+	  }, { hover: hover, active: active });
 
 	  return _react2.default.createElement('div', { style: styles.button, onClick: onClick }, _react2.default.createElement('div', { style: styles.icon }), parseInt(number, 10).toLocaleString(), _react2.default.createElement('div', { style: styles.tooltip }, tooltip));
 	};
