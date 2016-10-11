@@ -35,6 +35,9 @@ export const FacebookCounter = ({ counters, user, important, onClick, bg }) => {
     if (_.includes(names, important[0])) {
       nameString.push(important[0])
     }
+    if (_.includes(names, important[1])) {
+      nameString.push(important[1])
+    }
   }
   nameString.push(`${ names.length - nameString.length } others`)
 

@@ -13,6 +13,7 @@ import { FacebookCounter, FacebookSelector, GithubCounter, GithubSelector,
 import TitleWrap from './TitleWrap'
 import Header from './Header'
 import Youtube from '../../examples/Youtube'
+import Github from '../../examples/Github'
 
 export const Index = (props) => {
   const styles = reactCSS({
@@ -25,6 +26,10 @@ export const Index = (props) => {
       githubSelector: {
         marginRight: '40px',
         maxWidth: '292px',
+      },
+      countersFlex: {
+        marginRight: '40px',
+        maxWidth: '330px',
       },
       space: {
         height: '60px',
@@ -42,6 +47,11 @@ export const Index = (props) => {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'flex-end',
+      },
+      counters: {
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'flex-start',
       },
       docs: {
         display: 'flex',
@@ -160,26 +170,10 @@ export const Index = (props) => {
       <Header>Counters</Header>
 
       <div style={ styles.index }>
-        <div style={ styles.githubSelector }>
+        <div style={ styles.countersFlex }>
 
           <TitleWrap title="Github">
-            <div style={{ width: '230px' }}>
-              <GithubCounter
-                counters={ [{
-                  emoji: '👍',
-                  by: 'case',
-                }, {
-                  emoji: '👍',
-                  by: 'roasbeef',
-                }, {
-                  emoji: '❤️',
-                  by: 'joseph',
-                }] }
-                user="case"
-                onAdd={ handleGithubAdd }
-                onSelect={ handleSelect }
-              />
-            </div>
+            <Github />
           </TitleWrap>
 
           <div style={ styles.space } />
@@ -213,7 +207,7 @@ export const Index = (props) => {
           </TitleWrap>
         </div>
 
-        <div style={ styles.slack }>
+        <div style={ styles.counters }>
 
           <TitleWrap title="Youtube">
             <div style={{ height: '38px' }}>
